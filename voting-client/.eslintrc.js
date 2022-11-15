@@ -14,10 +14,6 @@ module.exports = {
         sourceType: 'module',
     },
     extends: ['eslint:recommended', 'eslint-config-prettier', 'prettier'],
-    rules: {
-        "curly": "all",
-        'no-console': 'warn',
-    },
     overrides: [
         {
             files: ['**/*.+(ts|tsx)'],
@@ -36,13 +32,13 @@ module.exports = {
                 'plugin:sonarjs/recommended',
             ],
             rules: {
-                'react/jsx-uses-react': 'error',
                 'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
                 '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
                 '@typescript-eslint/ban-ts-comment': 'off',
                 'react/display-name': 'off',
                 '@typescript-eslint/no-explicit-any': 'warn',
                 'react/prop-types': 'off',
+                "react/react-in-jsx-scope": "off"
             },
         },
         {
@@ -54,7 +50,13 @@ module.exports = {
                 'sonarjs/no-duplicate-string': 'warn',
                 '@typescript-eslint/no-var-requires': 'warn',
                 'sonarjs/no-identical-functions': 'warn',
+                "react/react-in-jsx-scope": "off"
             },
         },
     ],
+    rules: {
+        "curly": "warn",
+        'no-console': 'warn',
+        "react/react-in-jsx-scope": "off"
+    },
 };
