@@ -10,6 +10,7 @@ interface IconButtonProps {
     className?: string | undefined,
     iconClassName?: string | undefined,
     size?: SizeProp | undefined,
+    onClick?: () => void | undefined
 }
 
 const IconButton = ({
@@ -17,12 +18,14 @@ const IconButton = ({
     className = undefined,
     iconClassName = undefined,
     size = '2x',
+    onClick = () => { return;}
   }: IconButtonProps) => {
 
     const themeContext = useContext(ThemeContext)
 
     return (
         <div 
+        onClick={onClick}
         className={`${style.container} ${style[Themes[themeContext.theme]]} ${className}`}>
             <FontAwesomeIcon icon={icon} className={iconClassName} size={size}/>
         </div>
