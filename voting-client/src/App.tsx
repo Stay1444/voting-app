@@ -15,9 +15,10 @@ const App = () => {
             <Route path=':id'>
               <Route path='vote' element={<VotePage/>}/>  
               <Route path='results' element={<ResultsPage/>}/>
+              <Route path='*' element={<Navigate replace to="vote"/>}/> {/* REDIRECT TO VOTING PAGE IF NO PAGE WAS SPECIFIED */}
               <Route index element={<Navigate replace to="vote"/>}/> {/* REDIRECT TO VOTING PAGE IF NO PAGE WAS SPECIFIED */}
             </Route>
-            <Route index element={<Navigate replace to="create"/>}/>
+            <Route index element={<Navigate to="create"/>}/>
           </Route>
         </Routes>
       </ThemeContextProvider>
