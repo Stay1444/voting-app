@@ -11,4 +11,44 @@
     margin-top: auto
 
     margin-bottom: 15px
-    margin-right: 15px    
+    margin-right: 15px
+
+.options
+    display: flex
+    flex-direction: column
+
+    height: 60%
+    overflow-x: hidden
+    overflow-y: auto
+
+    width: calc( 100% - 70px )
+    margin-top: 10px
+    margin-left: 35px
+    > input
+        flex-shrink: 0
+        height: 30px
+        padding-left: 25px
+        margin-top: 10px
+        font-size: 16px
+            
+@media (max-width: 750px) 
+    .title
+        margin-top: 75px
+        height: 50px
+        font-size: 34px
+    .create
+        height: 70px
+        width: 70px
+
+    .options
+        > input
+            height: 50px
+            font-size: 26px
+
+.optionsDark
+    > input
+        border-bottom: 1px dashed #a6a6a698
+
+.optionsWhite
+    > input
+        border-bottom: 1px dashed #1a1a1ad6
