@@ -11,10 +11,23 @@
 
     user-select: none
 
-.Dark
-    background: url("img/backgrounds/Dark.jpg") no-repeat
-    background-size: cover
+    font-family: 'Rubik', sans-serif
+.outlet
+    display: flex
+    flex-direction: column
+    border-radius: 10px
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75)
 
-.White
-    background: url("img/backgrounds/White.jpg") no-repeat
-    background-size: cover
+@media (min-width: 750px)
+    .outlet
+        height: 400px
+        width: 600px
+
+        margin: auto
+
+@media (max-width: 750px)
+    .outlet
+        height: calc( 100% - 15px )
+        width: calc( 100% - 15px )
+
+        margin: auto
