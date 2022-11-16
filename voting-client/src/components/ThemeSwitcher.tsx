@@ -10,6 +10,7 @@ import MoonIcon from "../img/icons/moon.png"
 
 const ThemeSwitcher = (props: ThemeSwitcherProps) => {
     const themeContext = useContext(ThemeContext);
+    
     return (
         <>
             <div 
